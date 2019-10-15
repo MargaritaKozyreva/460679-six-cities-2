@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
 * Студент: [Margarita Kozyreva](https://up.htmlacademy.ru/react/2/user/460679).
-* Наставник: `Неизвестно`.
+* Наставник: [Константин Мамаев](https://up.htmlacademy.ru/react/2/user/210773).
 
 ---
 
