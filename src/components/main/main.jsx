@@ -5,17 +5,17 @@ const Main = () => {
     <Fragment>
       <div style={{display: `none`}}>
         <svg xmlns="http://www.w3.org/2000/svg">
-          <symbol id="icon-arrow-select" viewbox="0 0 7 4">
+          <symbol id="icon-arrow-select" viewBox="0 0 7 4">
             <path
               fillRule="evenodd"
               clipRule="evenodd"
               d="M0 0l3.5 2.813L7 0v1.084L3.5 4 0 1.084V0z"
             ></path>
           </symbol>
-          <symbol id="icon-bookmark" viewbox="0 0 17 18">
+          <symbol id="icon-bookmark" viewBox="0 0 17 18">
             <path d="M3.993 2.185l.017-.092V2c0-.554.449-1 .99-1h10c.522 0 .957.41.997.923l-2.736 14.59-4.814-2.407-.39-.195-.408.153L1.31 16.44 3.993 2.185z"></path>
           </symbol>
-          <symbol id="icon-star" viewbox="0 0 13 12">
+          <symbol id="icon-star" viewBox="0 0 13 12">
             <path
               fillRule="evenodd"
               clipRule="evenodd"
@@ -107,7 +107,7 @@ const Main = () => {
                   <span className="places__sorting-type" tabIndex="0">
                     Popular
                     <svg className="places__sorting-arrow" width="7" height="4">
-                      <use xLinkHref="#icon-arrow-select"></use>
+                      <use xlinkHref="#icon-arrow-select"></use>
                     </svg>
                   </span>
                   <ul className="places__options places__options--custom places__options--opened">
@@ -168,14 +168,14 @@ const Main = () => {
                             width="18"
                             height="19"
                           >
-                            <use xLinkHref="#icon-bookmark"></use>
+                            <use xlinkHref="#icon-bookmark"></use>
                           </svg>
                           <span className="visually-hidden">To bookmarks</span>
                         </button>
                       </div>
                       <div className="place-card__rating rating">
                         <div className="place-card__stars rating__stars">
-                          <span style="width: 93%"></span>
+                          <span style={{width: `93%`}}></span>
                           <span className="visually-hidden">Rating</span>
                         </div>
                       </div>
@@ -217,15 +217,15 @@ const Main = () => {
                             width="18"
                             height="19"
                           >
-                            <use xLinkHref="#icon-bookmark"></use>
+                            <use xlinkHref="#icon-bookmark"></use>
                           </svg>
                           <span className="visually-hidden">In bookmarks</span>
                         </button>
                       </div>
                       <div className="place-card__rating rating">
                         <div className="place-card__stars rating__stars">
-                          <span style="width: 80%"></span>
                           <span className="visually-hidden">Rating</span>
+                          <span style={{width: `80%`}}></span>
                         </div>
                       </div>
                       <h2 className="place-card__name">
@@ -264,15 +264,15 @@ const Main = () => {
                             width="18"
                             height="19"
                           >
-                            <use xLinkHref="#icon-bookmark"></use>
+                            <use xlinkHref="#icon-bookmark"></use>
                           </svg>
                           <span className="visually-hidden">To bookmarks</span>
                         </button>
                       </div>
                       <div className="place-card__rating rating">
                         <div className="place-card__stars rating__stars">
-                          <span style="width: 80%"></span>
                           <span className="visually-hidden">Rating</span>
+                          <span style={{width: `80%`}}></span>
                         </div>
                       </div>
                       <h2 className="place-card__name">
@@ -314,15 +314,15 @@ const Main = () => {
                             width="18"
                             height="19"
                           >
-                            <use xLinkHref="#icon-bookmark"></use>
+                            <use xlinkHref="#icon-bookmark"></use>
                           </svg>
                           <span className="visually-hidden">To bookmarks</span>
                         </button>
                       </div>
                       <div className="place-card__rating rating">
                         <div className="place-card__stars rating__stars">
-                          <span style="width: 100%"></span>
                           <span className="visually-hidden">Rating</span>
+                          <span style={{width: `100%`}}></span>
                         </div>
                       </div>
                       <h2 className="place-card__name">
@@ -361,15 +361,15 @@ const Main = () => {
                             width="18"
                             height="19"
                           >
-                            <use xLinkHref="#icon-bookmark-active"></use>
+                            <use xlinkHref="#icon-bookmark-active"></use>
                           </svg>
                           <span className="visually-hidden">In bookmarks</span>
                         </button>
                       </div>
                       <div className="place-card__rating rating">
                         <div className="place-card__stars rating__stars">
-                          <span style="width: 80%"></span>
                           <span className="visually-hidden">Rating</span>
+                          <span style={{width: `80%`}}></span>
                         </div>
                       </div>
                       <h2 className="place-card__name">
