@@ -8,4 +8,9 @@ const list = [
   `Canal View Prinsengracht`,
   `Nice, cozy, warm big bed apartment`
 ];
-ReactDOM.render(<Main list={list} />, document.getElementById(`root`));
+
+const clickHandler = () => {
+
+};
+
+ReactDOM.render(<Main list={list} clickHandler={clickHandler}/>, document.getElementById(`root`));

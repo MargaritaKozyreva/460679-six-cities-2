@@ -2,10 +2,10 @@ import React, {Fragment} from "react";
 import PropTypes from 'prop-types';
 import PlaceCard from "../place-card/place-card.jsx";
 
-const Main = ({list}) => {
+const Main = ({list, clickHandler}) => {
 
   const cardList = list.map((item) => {
-    return <PlaceCard title={item} link="#" key={item} />;
+    return <PlaceCard title={item} clickHandler = {clickHandler} link="#" key={item} />;
   });
 
   return (
@@ -158,7 +158,8 @@ const Main = ({list}) => {
 };
 
 Main.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.string)
+  list: PropTypes.arrayOf(PropTypes.string),
+  clickHandler: PropTypes.func
 };
 
 export default Main;
