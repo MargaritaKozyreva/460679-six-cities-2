@@ -1,12 +1,11 @@
 import React, {Fragment} from "react";
-import PropTypes from 'prop-types';
-import PlaceCard from "../place-card/place-card.jsx";
+import PlaceCardList from "../place-card-list/place-card-list.jsx";
 
-const Main = ({list, clickHandler}) => {
+import PropTypes from "prop-types";
 
-  const cardList = list.map((item) => {
-    return <PlaceCard title={item} clickHandler = {clickHandler} link="#" key={item} />;
-  });
+const Main = ({cards}) => {
+
+  const onTitleClickHandler = () => {};
 
   return (
     <Fragment>
@@ -143,7 +142,10 @@ const Main = ({list, clickHandler}) => {
                 </select> */}
                 </form>
                 <div className="cities__places-list places__list tabs__content">
-                  {cardList}
+                  <PlaceCardList
+                    cards={cards}
+                    onTitleClickHandler={onTitleClickHandler}
+                  />
                 </div>
               </section>
               <div className="cities__right-section">
@@ -158,8 +160,7 @@ const Main = ({list, clickHandler}) => {
 };
 
 Main.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.string),
-  clickHandler: PropTypes.func
+  cards: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default Main;
