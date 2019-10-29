@@ -25,13 +25,13 @@ describe(`PlaceCard initial`, () => {
   const placeCard = shallow(<PlaceCard {...mockProps} />);
 
   it(`PlaceCard click on title correctly`, () => {
-    const title = placeCard.find(`h2`);
+    const title = placeCard.find(`.place-card__name`);
     title.simulate(`click`);
     expect(onTitleClickHandler).toHaveBeenCalledTimes(1);
   });
 
   it(`PlaceCard focus on card correctly`, () => {
-    const card = placeCard.find(`article`);
+    const card = placeCard.find(`.cities__place-card`);
     card.simulate(`mouseOver`, {target: 0});
     expect(onCurrentCard).toBeCalled();
   });
