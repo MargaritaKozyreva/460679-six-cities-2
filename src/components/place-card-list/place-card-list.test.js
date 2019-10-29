@@ -1,8 +1,11 @@
 import React from "react";
-import Main from "./main.jsx";
+import PlaceCardList from "./place-card-list.jsx";
 import renderer from "react-test-renderer";
 
-describe(`initial Main`, () => {
+describe(`initial PlaceCardList`, () => {
+
+  const onTitleClickHandler = jest.fn();
+
   const mockProps = {
     cards: [
       {
@@ -32,10 +35,11 @@ describe(`initial Main`, () => {
         ]
       }
     ],
+    onTitleClickHandler
   };
 
-  it(`Main renders correctly`, () => {
-    const tree = renderer.create(<Main {...mockProps} />).toJSON();
+  it(`PlaceCardList renders correctly`, () => {
+    const tree = renderer.create(<PlaceCardList {...mockProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

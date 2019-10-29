@@ -4,12 +4,20 @@ import renderer from "react-test-renderer";
 
 describe(`initial PlaceCard`, () => {
 
-  const clickHandler = jest.fn();
+  const onTitleClickHandler = jest.fn();
+  const onCurrentCard = jest.fn();
 
   const mockProps = {
-    title: `test`,
-    link: `test`,
-    clickHandler
+    type: `Apartment`,
+    offer: {
+      title: `Canal View Prinsengracht`,
+      link: `#`,
+      price: 140,
+      img: `img/apartment-01.jpg`,
+      raiting: 3
+    },
+    onTitleClickHandler,
+    onCurrentCard,
   };
 
   it(`PlaceCard renders correctly`, () => {
