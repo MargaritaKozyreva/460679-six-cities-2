@@ -8,6 +8,8 @@ export default class PlaceCardList extends Component {
     this.state = {
       currentCard: 1
     };
+
+    this.onCurrentCard = this.onCurrentCard.bind(this);
   }
 
   onCurrentCard(idx) {
@@ -19,25 +21,14 @@ export default class PlaceCardList extends Component {
   render() {
 
     const {cards, onTitleClickHandler} = this.props;
-    cards.map((card) => {
-      return card.offers.map((offer) => (
-        <PlaceCard
-          type={card.type}
-          offer={offer}
-          onTitleClickHandler={onTitleClickHandler}
-          onCurrentCard={this.onCurrentCard.bind(this)}
-          key={offer.id}
-        />
-      ));
-    });
-    return cards.map((card) => {
 
+    return cards.map((card) => {
       return card.offers.map((offer) => (
         <PlaceCard
           type={card.type}
           offer={offer}
           onTitleClickHandler={onTitleClickHandler}
-          onCurrentCard={this.onCurrentCard.bind(this)}
+          onCurrentCard={this.onCurrentCard}
           key={offer.id}
         />
       ));
