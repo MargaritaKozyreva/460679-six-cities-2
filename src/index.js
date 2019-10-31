@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Main from "./components/main/main.jsx";
-import {cards} from "./components/mocks/offers.js";
+import App from "./components/app/app.jsx";
 
-ReactDOM.render(<Main cards={cards}/>, document.getElementById(`root`));
+import {cards, staticProps} from "./components/mocks/offers.js";
+
+ReactDOM.render(<App props = {cards} staticProps = {staticProps}/>, document.getElementById(`root`));

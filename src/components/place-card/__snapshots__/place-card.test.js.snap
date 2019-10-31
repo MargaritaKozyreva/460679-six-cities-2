@@ -86,7 +86,7 @@ exports[`initial PlaceCard PlaceCard renders correctly 1`] = `
       onClick={[MockFunction]}
     >
       <a
-        href="#"
+        href="/details"
       >
         Canal View Prinsengracht
       </a>
