@@ -8,12 +8,13 @@ const getPageScreen = (props, staticProps) => {
     case `/`:
       return <Main cards={props} />;
     case `/details`:
-      return <Details props={staticProps}/>;
+      return <Details {...staticProps}/>;
   }
   return null;
 };
 
 const App = ({props, staticProps}) => {
+
   return <Fragment>{getPageScreen(props, staticProps)}</Fragment>;
 };
 

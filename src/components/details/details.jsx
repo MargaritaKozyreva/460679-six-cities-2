@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Details = ({props}) => {
+const Details = (props) => {
 
   const {
     offers: {
@@ -30,9 +30,9 @@ const Details = ({props}) => {
                 alt="Photo studio"
               />
             </div>
-            {gallery.map((img) => {
+            {gallery.map((img, i) => {
               return (
-                <div key = {`image-${id}`} className="property__image-wrapper">
+                <div key = {`image-${id}-${i}`} className="property__image-wrapper">
                   <img
                     className="property__image"
                     src={img}
@@ -87,9 +87,9 @@ const Details = ({props}) => {
             <div className="property__inside">
               <h2 className="property__inside-title">Whats inside</h2>
               <ul className="property__inside-list">
-                {insideList.map((listItem) => {
+                {insideList.map((listItem, i) => {
                   return (
-                    <li key={`li-${id}`} className="property__inside-item">
+                    <li key={`li-${id}-${i}`} className="property__inside-item">
                       {listItem}
                     </li>
                   );
@@ -112,7 +112,7 @@ const Details = ({props}) => {
                 <span className="property__user-status">{userStatus}</span>
               </div>
               <div className="property__description">
-                {description.map((text) => <p key = {`p-${id}`} className="property__text">{text}</p>)}
+                {description.map((text, i) => <p key = {`p-${id}-${i}`} className="property__text">{text}</p>)}
               </div>
             </div>
           </div>
