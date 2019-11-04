@@ -87,7 +87,7 @@ Array [
         onClick={[MockFunction]}
       >
         <a
-          href="#"
+          href="/details"
         >
           Nice, cozy, warm big bed apartment
         </a>
@@ -184,7 +184,7 @@ Array [
         onClick={[MockFunction]}
       >
         <a
-          href="#"
+          href="/details"
         >
           Nice, cozy, warm big bed apartment
         </a>

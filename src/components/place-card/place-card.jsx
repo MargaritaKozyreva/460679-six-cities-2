@@ -36,7 +36,7 @@ const PlaceCard = ({type, offer, onTitleClickHandler, onCurrentCard}) => {
           </div>
         </div>
         <h2 className="place-card__name" onClick={onTitleClickHandler}>
-          <a href={offer.link}>{offer.title}</a>
+          <a href="/details">{offer.title}</a>
         </h2>
         <p className="place-card__type">{type}</p>
       </div>
