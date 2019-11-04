@@ -1,6 +1,7 @@
 export const staticProps = {
   type: `Apartment`,
   offers: {
+    coordinates: [52.3909553943508, 4.85309666406198],
     id: 1,
     title: `Canal View Prinsengracht`,
     price: 140,
@@ -78,7 +79,8 @@ export const cards = [
             comes to rest in this alley flowery and colorful.
             `
           ]
-        }
+        },
+        coordinates: [52.3909553943508, 4.85309666406198],
       },
       {
         id: 2,
@@ -113,7 +115,8 @@ export const cards = [
             comes to rest in this alley flowery and colorful.
             `
           ]
-        }
+        },
+        coordinates: [52.369553943508, 4.85309666406198],
       },
       {
         id: 3,
@@ -149,7 +152,8 @@ export const cards = [
             comes to rest in this alley flowery and colorful.
             `
           ]
-        }
+        },
+        coordinates: [52.3909553943508, 4.929309666406198],
       }
     ]
   },
@@ -189,7 +193,8 @@ export const cards = [
             comes to rest in this alley flowery and colorful.
             `
           ]
-        }
+        },
+        coordinates: [52.3809553943508, 4.939309666406198]
       }
     ]
   }
