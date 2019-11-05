@@ -1,8 +1,14 @@
-import React, {Component} from "react";
+import React, {Component, createRef} from "react";
 import L from "leaflet";
 import PropTypes from "prop-types";
 
 export default class Map extends Component {
+
+  constructor(props) {
+    super(props);
+    this.mapRef = createRef();
+  }
+
 
   componentDidMount() {
 
@@ -16,7 +22,7 @@ export default class Map extends Component {
       iconSize: [30, 30]
     });
 
-    this.map = L.map(`map`, {
+    this.map = L.map(this.mapRef.current, {
       center: this.city,
       zoom: this.zoom,
       zoomControl: false,
@@ -36,11 +42,11 @@ export default class Map extends Component {
     });
   }
   render() {
-    return <div id="map" style={{height: `100%`, width: `100%`}}></div>;
+    return <section className="cities__map map" ref={this.mapRef}/>;
   }
 }
 
 
 Map.propTypes = {
-  coordinates: PropTypes.array.isRequired,
+  coordinates: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
 };
