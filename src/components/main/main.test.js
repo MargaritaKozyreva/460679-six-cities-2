@@ -124,11 +124,14 @@ describe(`initial Main`, () => {
 
   it(`Main renders correctly`, () => {
     const tree = renderer.create(<Main {...mockProps} />, {
-      createNodeMock: (element) => {
-        if (element.type === `section`) {
-          return document.createElement(`section`);
-        }
-        return null;
+      createNodeMock: () => {
+
+        let mapMock = document.createElement(`section`);
+        mapMock.setAttribute(`id`, `map`);
+        document.body.appendChild(mapMock);
+
+        return mapMock;
+
       }
     }).toJSON();
     expect(tree).toMatchSnapshot();

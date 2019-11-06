@@ -12,13 +12,22 @@ describe(`Initial Map`, () => {
     ]
   };
   it(`render correctly`, () => {
+
+    const leafletMock = jest.mock(`leaflet`);
+    const citys = [{
+      coords: [0, 0],
+    }];
+
     const tree = renderer
-      .create(<Map {...mockProps} />, {
-        createNodeMock: (element) => {
-          if (element.type === `section`) {
-            return document.createElement(`section`);
-          }
-          return null;
+      .create(<Map {...mockProps} leaflet={leafletMock} citys={citys}/>, {
+        createNodeMock: () => {
+
+          let mapMock = document.createElement(`section`);
+          mapMock.setAttribute(`id`, `map`);
+          document.body.appendChild(mapMock);
+
+          return mapMock;
+
         }
       })
       .toJSON();
