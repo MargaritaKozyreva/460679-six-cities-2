@@ -19,7 +19,7 @@ const App = ({props, staticProps}) => {
 };
 
 App.propTypes = {
-  props: PropTypes.object.isRequired,
+  props: PropTypes.any,
   staticProps: PropTypes.object.isRequired
 };
 

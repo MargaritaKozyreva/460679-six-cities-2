@@ -1,9 +1,16 @@
 import React, {Fragment} from "react";
 import PlaceCardList from "../place-card-list/place-card-list.jsx";
+import Map from "../map/map.jsx";
 
 import PropTypes from "prop-types";
 
 const Main = ({cards}) => {
+
+  const coordinatesUni = [];
+
+  cards.map((card) => {
+    return card.offers.map((offer) => coordinatesUni.push(offer.coordinates));
+  });
 
   const onTitleClickHandler = () => {};
 
@@ -149,7 +156,7 @@ const Main = ({cards}) => {
                 </div>
               </section>
               <div className="cities__right-section">
-                <section className="cities__map map"></section>
+                <Map coordinates={coordinatesUni}/>
               </div>
             </div>
           </div>
