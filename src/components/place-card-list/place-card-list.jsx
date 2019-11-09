@@ -22,17 +22,15 @@ export default class PlaceCardList extends Component {
 
     const {cards, onTitleClickHandler} = this.props;
 
-    return cards.map((card) => {
-      return card.offers.map((offer) => (
-        <PlaceCard
-          type={card.type}
-          offer={offer}
-          onTitleClickHandler={onTitleClickHandler}
-          onCurrentCard={this.onCurrentCard}
-          key={offer.id}
-        />
-      ));
-    });
+    return cards.map((card) =>
+      <PlaceCard
+        type={card.type}
+        offer={card}
+        onTitleClickHandler={onTitleClickHandler}
+        onCurrentCard={this.onCurrentCard}
+        key={card.id}
+      />
+    );
   }
 }
 

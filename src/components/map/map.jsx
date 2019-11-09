@@ -9,6 +9,9 @@ export default class Map extends Component {
     this.mapRef = createRef();
   }
 
+  componentWillUnmount() {
+    this.map.remove();
+  }
 
   componentDidMount() {
 
@@ -42,7 +45,7 @@ export default class Map extends Component {
     });
   }
   render() {
-    return <section className="cities__map map" ref={this.mapRef}/>;
+    return <section className="cities__map map" ref={this.mapRef} style={{width: `100%`, height: `100%`}}/>;
   }
 }
 

@@ -4,15 +4,9 @@ import Map from "../map/map.jsx";
 
 import PropTypes from "prop-types";
 
-const Main = ({cards}) => {
+const Main = ({cards, coords, onTitleClickHandler}) => {
 
-  const coordinatesUni = [];
-
-  cards.map((card) => {
-    return card.offers.map((offer) => coordinatesUni.push(offer.coordinates));
-  });
-
-  const onTitleClickHandler = () => {};
+  const placesCount = cards.length;
 
   return (
     <Fragment>
@@ -114,7 +108,7 @@ const Main = ({cards}) => {
             <div className="cities__places-container container">
               <section className="cities__places places">
                 <h2 className="visually-hidden">Places</h2>
-                <b className="places__found">312 places to stay in Amsterdam</b>
+                <b className="places__found">{placesCount} places to stay in Amsterdam</b>
                 <form className="places__sorting" action="#" method="get">
                   <span className="places__sorting-caption">Sort by</span>
                   <span className="places__sorting-type" tabIndex="0">
@@ -156,7 +150,7 @@ const Main = ({cards}) => {
                 </div>
               </section>
               <div className="cities__right-section">
-                <Map coordinates={coordinatesUni}/>
+                <Map coordinates={coords}/>
               </div>
             </div>
           </div>
@@ -168,6 +162,8 @@ const Main = ({cards}) => {
 
 Main.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.object),
+  coords: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
+  onTitleClickHandler: PropTypes.func
 };
 
 export default Main;

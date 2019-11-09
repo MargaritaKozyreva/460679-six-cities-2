@@ -3,5 +3,11 @@
 exports[`Initial Map render correctly 1`] = `
 <section
   className="cities__map map"
+  style={
+    Object {
+      "height": "100%",
+      "width": "100%",
+    }
+  }
 />
 `;

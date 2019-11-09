@@ -9,14 +9,11 @@ Array [
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
-      <a
-        href="#"
-      >
+      <a>
         <img
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-01.jpg"
           width="260"
         />
       </a>
@@ -34,7 +31,6 @@ Array [
             className="place-card__price-value"
           >
             €
-            170
           </b>
           <span
             className="place-card__price-text"
@@ -70,9 +66,7 @@ Array [
         >
           <span
             className="visually-hidden"
-          >
-            3
-          </span>
+          />
           <span
             style={
               Object {
@@ -88,9 +82,7 @@ Array [
       >
         <a
           href="/details"
-        >
-          Nice, cozy, warm big bed apartment
-        </a>
+        />
       </h2>
       <p
         className="place-card__type"
@@ -106,14 +98,11 @@ Array [
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
-      <a
-        href="#"
-      >
+      <a>
         <img
           alt="Place image"
           className="place-card__image"
           height="200"
-          src="img/apartment-01.jpg"
           width="260"
         />
       </a>
@@ -131,7 +120,6 @@ Array [
             className="place-card__price-value"
           >
             €
-            170
           </b>
           <span
             className="place-card__price-text"
@@ -167,9 +155,7 @@ Array [
         >
           <span
             className="visually-hidden"
-          >
-            3
-          </span>
+          />
           <span
             style={
               Object {
@@ -185,9 +171,7 @@ Array [
       >
         <a
           href="/details"
-        >
-          Nice, cozy, warm big bed apartment
-        </a>
+        />
       </h2>
       <p
         className="place-card__type"
