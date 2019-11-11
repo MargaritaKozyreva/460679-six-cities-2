@@ -21,7 +21,14 @@ const ReviewsList = ({reviews}) => {
 };
 
 ReviewsList.propTypes = {
-  reviews: PropTypes.arrayOf(PropTypes.object).isRequired
+  reviews: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    userName: PropTypes.string,
+    userImg: PropTypes.string,
+    userRaiting: PropTypes.number,
+    text: PropTypes.string,
+    createDate: PropTypes.string,
+  })).isRequired
 };
 
 export default ReviewsList;

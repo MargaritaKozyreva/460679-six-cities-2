@@ -161,7 +161,34 @@ const Main = ({cards, coords, onTitleClickHandler}) => {
 };
 
 Main.propTypes = {
-  cards: PropTypes.arrayOf(PropTypes.object),
+  cards: PropTypes.arrayOf(PropTypes.shape({
+    coordinates: PropTypes.arrayOf(PropTypes.number),
+    gallery: PropTypes.arrayOf(PropTypes.string),
+    host: PropTypes.shape({
+      hostImg: PropTypes.string,
+      userName: PropTypes.string,
+      userStatus: PropTypes.string,
+      description: PropTypes.arrayOf(PropTypes.string)
+    }),
+    id: PropTypes.number.isRequired,
+    img: PropTypes.string,
+    insideList: PropTypes.arrayOf(PropTypes.string),
+    link: PropTypes.string,
+    mainImg: PropTypes.string,
+    price: PropTypes.number,
+    raiting: PropTypes.number,
+    reviews: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      userName: PropTypes.string,
+      userImg: PropTypes.string,
+      userRaiting: PropTypes.number,
+      text: PropTypes.string,
+      createDate: PropTypes.string,
+    })).isRequired,
+    roomClass: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+  })),
   coords: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
   onTitleClickHandler: PropTypes.func
 };

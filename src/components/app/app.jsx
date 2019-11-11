@@ -29,29 +29,60 @@ const getPageScreen = (cards, coords, onTitleClickHandler) => {
   return null;
 };
 
-const App = ({props}) => {
+const App = ({cards}) => {
 
-  const coords = [];
-  const cards = [];
+  const coordsArray = [];
+  const cardsArray = [];
 
   const onTitleClickHandler = () => {};
 
-  // eslint-disable-next-line react/prop-types
-  props.map((card) =>
-    card.offers.forEach((offer) => coords.push(offer.coordinates))
+  cards.map((card) =>
+    card.offers.forEach((offer) => coordsArray.push(offer.coordinates))
   );
-  // eslint-disable-next-line react/prop-types
-  props.map((card) => card.offers.forEach((car) => cards.push(car)));
+
+  cards.map((card) => card.offers.forEach((car) => cardsArray.push(car)));
 
   return (
     <Fragment>
-      {getPageScreen(cards, coords, onTitleClickHandler)}
+      {getPageScreen(cardsArray, coordsArray, onTitleClickHandler)}
     </Fragment>
   );
 };
 
 App.propTypes = {
-  props: PropTypes.PropTypes.arrayOf()
+  cards: PropTypes.arrayOf(PropTypes.shape({
+    type: PropTypes.string.isRequired,
+    offers: PropTypes.arrayOf(PropTypes.shape({
+      coordinates: PropTypes.arrayOf(PropTypes.number),
+      gallery: PropTypes.arrayOf(PropTypes.string),
+      host: PropTypes.shape({
+        hostImg: PropTypes.string,
+        userName: PropTypes.string,
+        userStatus: PropTypes.string,
+        description: PropTypes.arrayOf(PropTypes.string)
+      }),
+      id: PropTypes.number.isRequired,
+      img: PropTypes.string,
+      insideList: PropTypes.arrayOf(PropTypes.string),
+      link: PropTypes.string,
+      mainImg: PropTypes.string,
+      price: PropTypes.number,
+      raiting: PropTypes.number,
+      reviews: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        userName: PropTypes.string,
+        userImg: PropTypes.string,
+        userRaiting: PropTypes.number,
+        text: PropTypes.string,
+        createDate: PropTypes.string,
+      })).isRequired,
+      roomClass: PropTypes.string,
+      title: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+    }))
+  })),
+  coords: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
+  onTitleClickHandler: PropTypes.func.isRequired
 };
 
 export default App;
