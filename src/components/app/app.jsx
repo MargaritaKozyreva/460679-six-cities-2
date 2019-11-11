@@ -36,11 +36,12 @@ const App = ({cards}) => {
 
   const onTitleClickHandler = () => {};
 
-  cards.map((card) =>
-    card.offers.forEach((offer) => coordsArray.push(offer.coordinates))
+  cards.forEach((card) =>
+    card.offers.forEach((offer) => {
+      cardsArray.push(offer);
+      coordsArray.push(offer.coordinates);
+    })
   );
-
-  cards.map((card) => card.offers.forEach((car) => cardsArray.push(car)));
 
   return (
     <Fragment>
